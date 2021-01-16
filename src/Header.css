@@ -1,0 +1,15 @@
+.heade{
+display: flex !important;
+justify-content: space-between !important;
+align-items: center !important;
+border-bottom: 1px solid rgb(209, 127, 127) !important;
+}
+.header-icon{
+   
+    opacity:1 !important;
+    color: white !important;
+}
+.active.content {
+    display: block;
+    overflow-y: scroll !important;
+}

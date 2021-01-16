@@ -1,0 +1,38 @@
+import * as actionTypes from "./actionTypes";
+
+import axios from "axios"
+
+export const addMessage = message => {
+  return {
+    type: actionTypes.ADD_MESSAGE,
+    message: message
+  };
+};
+
+export const setMessages = messages => {
+  return {
+    type: actionTypes.SET_MESSAGES,
+    messages: messages
+  };
+};
+
+const getUserChatsSuccess = chats => {
+  return {
+    type: actionTypes.GET_CHATS_SUCCESS,
+    chats: chats
+  };
+};
+
+export const getUserChats = (username, token) => {
+  return dispatch => {
+    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+    axios.defaults.xsrfCookieName = "csrftoken";
+    axios.defaults.headers = {
+      "Content-Type": "application/json",
+      Authorization: `Token ${token}`
+    };
+    axios
+      .get(`https://3choices.in/cha/?username=${username}`)
+      .then(res => dispatch(getUserChatsSuccess(res.data)));
+  };
+};

@@ -1,0 +1,1 @@
+export const productDetailURL = id => `https://3choices.in/profile/profile/${id}/`;

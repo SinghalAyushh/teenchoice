@@ -1,0 +1,37 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.wrapper-x {
+	text-align: center;
+}
+
+.profile-container-x {
+	width: 50%;
+	height: 50%;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.08);
+	margin: auto;
+	padding: 16px 32px;
+	transform: translateY(-100px);
+	z-index: 10;
+	position: relative;
+    background-color: white;
+    color: black !important;
+    
+}
+
+.profile-pic-x {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: url();
+	background-size: cover;
+	margin: auto;
+}
+
+.image-container-x {
+	background-color: inherit;
+	min-height: 500px;
+}
